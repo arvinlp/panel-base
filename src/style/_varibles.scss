@@ -1,0 +1,67 @@
+@import "./css/iransans.css";
+@import "./css/iransansdn.css";
+
+$fontsPack: IRANSansNumber, IRANSans, IRANSansDN, Arial, Helvetica, sans-serif, "Font Awesome 5 Free",
+  "Font Awesome 5 Brand";
+$fontsPack2: IRANSansNumber, IRANSans, IRANSansDN, Arial, Helvetica, sans-serif;
+$iconFont: "Font Awesome 5 Free", "Font Awesome 5 Brand";
+
+$baseColor: #000000;
+$primaryColor: #17151d;
+$secondryColor: #9995a5;
+$secondryColor1: #383838af;
+$textColorPrimary: #a78001;
+$btnBgColor: #ffc812;
+$linkColor: #ffffff;
+$color0: #9995a5;
+$btnColor: #2c2833;
+$borderColor: #2c2833;
+$btnPrimaryColor: rgb(2, 130, 23);
+$redColor: #660000;
+$btnColorActive: #ffffff;
+
+.bg-pksi {
+  background-color: $primaryColor;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $fontsPack2;
+  font-weight: 500;
+}
+* {
+  font-family: $fontsPack;
+  font-weight: normal;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $secondryColor1 transparent;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $secondryColor1;
+  border-radius: 10px;
+  border: 3px solid transparent;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,128 @@
+.side-menu {
+    display: inline-block;
+    width: 25%;
+    height: calc(100vh - 5.58rem);
+    list-style: none;
+    padding: 0.5rem 1rem 2rem 1rem;
+    background-color: $primaryColor;
+    overflow: hidden;
+    overflow-y: scroll;
+    @media screen and (max-width: 768px) {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+    .menu-handler{
+        display: none;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        background-color: $primaryColor;
+        border-top: solid thin $btnColor;
+        border-bottom: solid thin $btnColor;
+        @media screen and (max-width:768px){
+            display: flex;
+        }
+        span{
+            font-size: 1rem;
+        }
+        i{
+            margin: 0 auto 0 0;
+        }
+    }
+    .side-menu-ul {
+        list-style: none;
+        padding: 0.5rem 1rem 2rem 1rem;
+
+        @media screen and (max-width: 768px) {
+            display: none;
+            &.show{
+                display: block;
+            }
+        }
+        li.side-item,
+        li.dropdown {
+            padding-top: 0.25rem;
+            margin-bottom: 0.25rem;
+        }
+        .side-dropdown,
+        a.side-link {
+            display: flex;
+            color: $color0;
+            cursor: pointer;
+            span {
+                display: inline-block;
+                margin: auto 0 auto auto;
+            }
+            i {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                margin-left: 1rem;
+                background: $btnColor;
+                border-radius: 50%;
+                svg {
+                    margin: 7px;
+                }
+            }
+            &:hover {
+                color: $linkColor;
+                text-decoration: none;
+            }
+            &.router-link-exact-active {
+                color: $linkColor;
+            }
+        }
+        .separator {
+            border-bottom: solid thin $btnColor;
+        }
+        .dropdown {
+            ul {
+                list-style: none;
+                margin-top: 0.5rem;
+                border-right: solid thin $btnColorActive;
+            }
+            .side-dropdown {
+                &::after {
+                    font-family: $iconFont;
+                    content: "\f0ab";
+                    margin: auto auto auto 0;
+                    -webkit-transition: all 0.4s ease-in-out;
+                    -moz-transition: all 0.4s ease-in-out;
+                    -ms-transition: all 0.4s ease-in-out;
+                    -o-transition: all 0.4s ease-in-out;
+                    transition: all 0.4s ease-in-out;
+                }
+            }
+            &:hover {
+                color: $linkColor;
+                text-decoration: none;
+            }
+            .children {
+                display: none;
+            }
+            &.show {
+                .side-dropdown {
+                    &::after {
+                        content: "\f0aa";
+                    }
+                }
+                .children {
+                    display: block;
+                }
+            }
+            &.active {
+                .side-dropdown {
+                    color: $linkColor;
+
+                    &::after {
+                        content: "\f0aa";
+                    }
+                }
+                .children {
+                    display: block;
+                }
+            }
+        }
+
+    }
+}

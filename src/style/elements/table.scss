@@ -1,0 +1,78 @@
+table.table {
+    border-color: $secondryColor1;
+    thead {
+        tr {
+            th {
+                border-color: $secondryColor1;
+                color: $textColorPrimary;
+                &.table-action {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    tbody {
+        tr {
+            background-color: $secondryColor1;
+            margin-bottom: 1rem;
+            td {
+                border: unset;
+                color: $color0;
+                &.table-action {
+                    text-align: center;
+                    a {
+                        margin-left: 1rem;
+                        &:last-child {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//   .vpd-container {
+//     .vpd-actions,
+//     .vpd-header {
+//       background-color: $datePickerHeaderFooterBg !important;
+//     }
+//     .vpd-date.direction-prev {
+//       text-align: center;
+//     }
+//     .vpd-body {
+//       background-color: $datePickerMainBg;
+//       svg path {
+//         fill: $datePickerElementColor;
+//       }
+//       .vpd-addon-list,
+//       .vpd-addon-list-content {
+//         background-color: $datePickerMainBg !important;
+//       }
+//       .vpd-addon-list,
+//       .vpd-day-effect,
+//       .vpd-addon-list-item {
+//         border-color: $datePickerMainBg !important;
+//       }
+//       .vpd-day.selected .vpd-day-effect,
+//       .vpd-day:hover .vpd-day-effect,
+//       .vpd-addon-list-item.selected,
+//       .vpd-addon-list-item:hover {
+//         background-color: $datePickerSelectedBg !important;
+//         color: $datePickerSelectedColor !important;
+//       }
+//       .vpd-close-addon {
+//         color: $datePickerElementColor;
+//       }
+//     }
+//     .vpd-actions {
+//       text-align: center;
+//       button {
+//         color: $textColor !important;
+//       }
+//       button:hover {
+//         background-color: $textColor !important;
+//         color: $white !important;
+//       }
+//     }
+//   }

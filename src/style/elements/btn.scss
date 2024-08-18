@@ -1,0 +1,44 @@
+.btn {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    &.btn-primary {
+        background-color: transparent;
+        border-color: $green;
+        color: $green;
+        &:hover {
+            color: $baseColor;
+            background-color: $btnBgColor;
+            border-color: $linkColor;
+        }
+    }
+    &.btn-danger{
+        background-color: transparent;
+        color: #dc3545;
+        &:hover {
+            color: $white;
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+    }
+    &.btn-outline-default{
+        padding-left: .5rem;
+        padding-right: .5rem;
+        background-color: transparent;
+        border-color: $color0;
+        color: $color0;
+        &:hover {
+            color: $color0;
+            background-color: $btnBgColor;
+            border-color: $linkColor;
+        }
+    }
+    &.btn-outline-primary {
+        border-color: $btnPrimaryColor;
+        color: $btnPrimaryColor;
+        &:hover {
+            color: $white;
+            background-color: $btnPrimaryColor;
+            border-color: $btnPrimaryColor;
+        }
+    }
+}

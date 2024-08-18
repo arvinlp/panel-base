@@ -1,0 +1,15 @@
+.modal-content{
+    background-color: $primaryColor;
+    direction: rtl;
+    .modal-header{
+        border-color: $borderColor;
+    }
+    .modal-footer{
+        display: table;
+        border-color: $borderColor;
+        div{
+            display: table-cell;
+            width: 1%;
+        }
+    }
+}

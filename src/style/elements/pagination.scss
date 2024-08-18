@@ -1,0 +1,19 @@
+.pagination {
+    direction: ltr;
+    margin: 0.5rem 0;
+    .page-item .page-link {
+        color: $color0;
+        background-color: $baseColor;
+        border-color: $borderColor;
+    }
+    .page-item.active .page-link {
+        color: $color0;
+        background-color: $primaryColor;
+        border-color: $borderColor;
+        border-radius: 0;
+    }
+    .page-item:first-child .page-link,
+    .page-item:last-child .page-link {
+        border-radius: 0;
+    }
+}

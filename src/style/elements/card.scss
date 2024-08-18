@@ -1,0 +1,9 @@
+.card {
+    background-color: $primaryColor;
+    border-color: $borderColor;
+    .card-title {
+        border-bottom: $borderColor solid thin;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+}

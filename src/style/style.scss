@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/vue-multiselect/dist/vue-multiselect.min.css";
+
+@import "./_varibles.scss";
+
+@import "./elements/base.scss";
+@import "./elements/btn.scss";
+@import "./elements/card.scss";
+@import "./elements/form.scss";
+@import "./elements/table.scss";
+@import "./elements/login.scss";
+@import "./elements/pagination.scss";
+@import "./elements/topbar.scss";
+@import "./elements/sidemenu.scss";
+@import "./elements/modal.scss";
+
+.main-content {
+    display: flex;
+    width: 100%;
+    flex: 100%;
+    height: 100%;
+    @media screen and (max-width:768px){
+        display: block;
+        flex: 100%;
+    }
+    .content-body {
+        height: calc(100vh - 5.58rem);
+        padding-top: 1rem;
+        padding-bottom: 5rem;
+        overflow: hidden;
+        overflow-y: scroll;
+        @media screen and (max-width:768px){
+            display: block;
+            flex: 100%;
+            height: auto;
+            padding-top: 1rem;
+            padding-bottom: 5rem;
+        }
+    }
+}
+.d-ltr{
+    direction: ltr;
+}

@@ -1,0 +1,204 @@
+input,
+textarea,
+.form-control {
+  font-family: $fontsPack2;
+  font-weight: normal;
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $white;
+  text-align: center;
+  background-color: $baseColor;
+  background-clip: padding-box;
+  border: 1px solid $borderColor;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  &:disabled {
+    background-color: $secondryColor1;
+    background-clip: padding-box;
+    border: 1px solid $secondryColor1;
+  }
+  &:focus {
+    color: $white;
+    background-color: $secondryColor1;
+    background-clip: padding-box;
+    border: 1px solid $secondryColor1;
+  }
+  &::placeholder {
+    text-align: center;
+  }
+  &::-webkit-credentials-auto-fill-button {
+    background-color: $color0;
+  }
+  &::-webkit-inner-spin-button {
+    display: none;
+  }
+}
+.form-radio-datamis,
+.form-check-datamis {
+  text-align: right;
+}
+
+input {
+  &::placeholder {
+    text-align: right;
+  }
+  .en-number {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  &[type="tel"],
+  &[type="email"],
+  &[type="number"] {
+    direction: ltr;
+  }
+  &[type="radio"],
+  &[type="checkbox"] {
+    display: none;
+    + label {
+      span {
+        display: inline-block;
+        right: 0.3rem;
+        width: 19px;
+        height: 19px;
+        margin: -2px 0 0 10px;
+        vertical-align: middle;
+        background: $borderColor;
+        border: solid thin $borderColor;
+        border-radius: 0.3rem;
+        cursor: pointer;
+      }
+    }
+  }
+  &:checked + label {
+    span {
+      background: #3490dc;
+    }
+  }
+  &[type="radio"] {
+    + label {
+      span {
+        border-radius: 50%;
+      }
+    }
+  }
+}
+.form-radio-label,
+.form-check-label {
+  display: inline-block;
+  padding: 0.5rem 0;
+  margin-bottom: unset;
+}
+.multiselect {
+  background: transparent;
+  text-align: center;
+  display: block;
+  width: 100%;
+  min-height: $input-height;
+  padding: $input-padding-y 0;
+  box-sizing: unset;
+  .multiselect__spinner,
+  .multiselect__select {
+    top: 12px;
+    left: 8px;
+    right: unset;
+    background: $baseColor;
+  }
+  .multiselect__select {
+    height: 30px;
+  }
+  .multiselect__tags {
+    border-radius: 1rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    min-height: $input-height;
+    padding: $input-padding-y $input-padding-x;
+    font-family: $input-font-family;
+    @include font-size($input-font-size);
+    font-weight: $input-font-weight;
+    line-height: $input-line-height;
+    color: $input-color;
+    background-color: $baseColor;
+    background-clip: padding-box;
+    border: solid thin $borderColor;
+    div.selected {
+      display: inline-block;
+      width: 25%;
+      padding: 0 0 0.5rem 0;
+    }
+  }
+  .multiselect__tags-wrap {
+    color: $textColorPrimary;
+  }
+  .multiselect__content,
+  .multiselect__content-wrapper {
+    background: $baseColor;
+    border: solid thin $borderColor;
+    color: $textColorPrimary;
+  }
+  .multiselect__content-wrapper {
+    border-radius: 1rem;
+    border-top: unset;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    font-size: 0.7rem;
+    .multiselect__element {
+      font-size: 0.7rem;
+    }
+    .multiselect__option--selected {
+      font-size: 0.7rem;
+      background: $secondryColor1;
+      color: $textColorPrimary;
+    }
+  }
+  .multiselect__input,
+  .multiselect__single {
+    background: transparent;
+    color: $textColorPrimary;
+  }
+  &::placeholder {
+    font-family: $fontsPack2;
+    background: $baseColor;
+    color: $color0;
+  }
+}
+.multiselect__option--selected.multiselect__option--highlight::after {
+  background: $redColor;
+}
+.custom-radio,
+.custom-checkbox {
+  position: relative;
+  margin-right: 2rem;
+  .custom-control-label {
+    &::before {
+      position: absolute;
+      right: -2rem;
+      left: unset;
+      background-color: $baseColor;
+      background-clip: padding-box;
+      border: 1px solid $borderColor;
+    }
+  }
+  .custom-control-input {
+    position: absolute;
+    right: -2rem;
+    left: unset;
+    &:checked ~ .custom-control-label::after {
+      position: absolute;
+      right: -2rem;
+      left: unset;
+    }
+    &:checked ~ .custom-control-label::before {
+      color: $primaryColor;
+      border-color: $borderColor;
+      background-color: $borderColor;
+    }
+  }
+}
+textarea {
+  min-height: 180px;
+}

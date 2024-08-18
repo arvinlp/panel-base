@@ -1,0 +1,27 @@
+.login {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    .card {
+        background-color: $primaryColor;
+        box-shadow: 0.25rem 0.25rem $secondryColor;
+        .card-title {
+            border-bottom: $secondryColor solid thin;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            text-align: center;
+        }
+        .input.react-code-input-container {
+            width: 100% !important;
+            .react-code-input {
+                display: flex;
+                direction: ltr;
+                input {
+                    width: 20% !important;
+                    flex: 20% !important;
+                    font-family: $fontsPack;
+                    color: $linkColor;
+                }
+            }
+        }
+    }
+}
